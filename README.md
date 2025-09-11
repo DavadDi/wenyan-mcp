@@ -2,7 +2,14 @@
 
 ![logo](data/wenyan-mcp.png)
 
-## Overview
+「文颜」是一款多平台排版美化工具，让你将 Markdown 一键发布至微信公众号、知乎、今日头条等主流写作平台。
+
+**文颜**现已推出多个版本：
+
+* [macOS App Store 版](https://github.com/caol64/wenyan) - MAC 桌面应用
+* [Windows + Linux 版](https://github.com/caol64/wenyan-pc) - 跨平台桌面应用
+* [CLI 版本](https://github.com/caol64/wenyan-cli) - CI/CD 或脚本自动化发布公众号文章
+* [MCP 版本](https://github.com/caol64/wenyan-mcp) - 让 AI 自动发布公众号文章
 
 文颜 MCP Server 是一个基于模型上下文协议（Model Context Protocol, MCP）的服务器组件，支持将 Markdown 格式的文章发布至微信公众号草稿箱，并使用与 [文颜](https://yuzhi.tech/wenyan) 相同的主题系统进行排版。
 
@@ -12,18 +19,26 @@ https://github.com/user-attachments/assets/2c355f76-f313-48a7-9c31-f0f69e5ec207
 
 - [让AI帮你管理公众号的排版和发布](https://babyno.top/posts/2025/06/let-ai-help-you-manage-your-gzh-layout-and-publishing/)
 
-支持的主题效果预览：
-
-- [内置主题](https://yuzhi.tech/docs/wenyan/theme)
-
-## Features
+## 功能
 
 - 列出并选择支持的文章主题
 - 使用内置主题对 Markdown 内容排版
 - 发布文章到微信公众号草稿箱
 - 自动上传本地或网络图片
 
----
+## 主题效果
+
+👉 [内置主题预览](https://yuzhi.tech/docs/wenyan/theme)
+
+文颜采用了多个开源的 Typora 主题，在此向各位作者表示感谢：
+
+- [Orange Heart](https://github.com/evgo2017/typora-theme-orange-heart)
+- [Rainbow](https://github.com/thezbm/typora-theme-rainbow)
+- [Lapis](https://github.com/YiNNx/typora-theme-lapis)
+- [Pie](https://github.com/kevinzhao2233/typora-theme-pie)
+- [Maize](https://github.com/BEATREE/typora-maize-theme)
+- [Purple](https://github.com/hliu202/typora-purple-theme)
+- [物理猫-薄荷](https://github.com/sumruler/typora-theme-phycat)
 
 ## 使用方式
 
@@ -151,14 +166,10 @@ docker build --build-arg NPM_REGISTRY=https://mirrors.cloud.tencent.com/npm/ -t 
 > * `WECHAT_APP_SECRET` 微信平台的 App Secret
 > * `HOST_IMAGE_PATH` 宿主机图片目录
 
----
-
 ## 微信公众号 IP 白名单
 
 请务必将服务器 IP 加入公众号平台的 IP 白名单，以确保上传接口调用成功。
 详细配置说明请参考：[https://yuzhi.tech/docs/wenyan/upload](https://yuzhi.tech/docs/wenyan/upload)
-
----
 
 ## 配置说明（Frontmatter）
 
@@ -177,16 +188,12 @@ cover: /Users/lei/Downloads/result_image.jpg
   * 如果正文有至少一张图片，可省略，此时将使用其中一张作为封面；
   * 如果正文无图片，则必须提供 cover。
 
----
-
 ## 关于图片自动上传
 
 * 支持图片路径：
 
   * 本地路径（如：`/Users/lei/Downloads/result_image.jpg`）
   * 网络路径（如：`https://example.com/image.jpg`）
-
----
 
 ## 示例文章格式
 
@@ -204,8 +211,6 @@ cover: /Users/lei/Downloads/result_image.jpg
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/Jsq9IicjScDVUjkPc6O22ZMvmaZUzof5bLDjMyLg2HeAXd0icTvlqtL7oiarSlOicTtiaiacIxpVOV1EeMKl96PhRPPw/640?wx_fmt=jpeg)
 ```
-
----
 
 ## 如何调试
 
@@ -235,13 +240,9 @@ npx @modelcontextprotocol/inspector
 6. 填入参数并点击 Run Tool
 7. 查看完整参数
 
----
-
 ## 赞助
 
 如果您觉得这个项目不错，可以给我家猫咪买点罐头吃。[喂猫❤️](https://yuzhi.tech/sponsor)
-
----
 
 ## License
 

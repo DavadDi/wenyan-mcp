@@ -4,7 +4,16 @@
   "description": "MCP server for Wenyan, a Markdown formatting tool that allows AI assistants to apply elegant built-in themes and publish articles directly to 微信公众号.",
   "author": "Lei <caol64@gmail.com> (https://github.com/caol64)",
   "license": "Apache-2.0",
-  "keywords": ["公众号", "markdown", "文颜", "wenyan", "wechat", "publishing", "renderer", "mcp"],
+  "keywords": [
+    "公众号",
+    "markdown",
+    "文颜",
+    "wenyan",
+    "wechat",
+    "publishing",
+    "renderer",
+    "mcp"
+  ],
   "type": "module",
   "bin": {
     "wenyan-mcp": "./dist/index.js"
@@ -12,6 +21,14 @@
   "files": [
     "dist"
   ],
+  "homepage": "https://github.com/caol64/wenyan-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caol64/wenyan-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/caol64/wenyan-mcp/issues"
+  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
